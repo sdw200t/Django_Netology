@@ -9,6 +9,7 @@ class StudentInline(admin.TabularInline):
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     inlines = [StudentInline,]
+    exclude = ['teachers',]
 
 @admin.register(Teacher)
 class TeacherAdmin(admin.ModelAdmin):
