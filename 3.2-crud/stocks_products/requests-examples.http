@@ -19,6 +19,12 @@ Content-Type: application/json
 
 ###
 
+# получение продуктов (пагинация)
+GET {{baseUrl}}/products/?page=1
+Content-Type: application/json
+
+###
+
 # обновление продукта
 PATCH {{baseUrl}}/products/1/
 Content-Type: application/json
@@ -64,7 +70,7 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/4/
+PATCH {{baseUrl}}/stocks/3/
 Content-Type: application/json
 
 {
@@ -87,3 +93,11 @@ Content-Type: application/json
 # поиск складов, где есть определенный продукт
 GET {{baseUrl}}/stocks/?products=2
 Content-Type: application/json
+
+###
+
+# получение складов
+GET {{baseUrl}}/stocks/
+Content-Type: application/json
+
+###
